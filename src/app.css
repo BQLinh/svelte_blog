@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav-items {
+    @apply flex mx-2 px-4 border-b-4 border-transparent hover:border-bluelight hover:cursor-pointer text-bluelight font-semibold font-serif;
+}
+
+.text-shadow {
+    text-shadow: -1px -5px -2px #faf7f6;
+}
