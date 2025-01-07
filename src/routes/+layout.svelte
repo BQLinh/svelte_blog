@@ -1,21 +1,17 @@
 <script>
     import "../output.css";
-
-    let text =
-        "Hello everyone! Welcome to my blog. Hope you guys can find some helpful things here";
-
-    // Tách đoạn text thành từng từ
-    let words = text.split(" ");
 </script>
 
-<div class="flex h-16 mx-auto w-9/12">
-    <div class="flex w-full">
-        <div class="icon w-1/6">
+<div class="flex h-auto mx-auto w-full md:w-9/12 md:h-16">
+    <div class="flex w-full flex-wrap justify-between">
+        <div class="w-1/2 md:w-1/6">
             <img src="img/metopotato1.png" alt="" class="h-16" />
         </div>
 
-        <nav class="w-8/12">
-            <ul class="flex justify-center align-middle mx-auto my-4 text-lg">
+        <div class="flex w-full md:w-8/12 order-last md:order-none">
+            <ul
+                class="flex justify-center align-middle mx-auto my-4 text-lg md:w-8/12"
+            >
                 <li class="nav-items">Home</li>
                 <li class="nav-items">Science</li>
                 <li class="nav-items">Math</li>
@@ -24,9 +20,9 @@
                 <li class="nav-items">Life</li>
                 <li class="nav-items">Tech</li>
             </ul>
-        </nav>
+        </div>
 
-        <div class="flex justify-end items-center icon w-1/6">
+        <div class="flex justify-end items-center w-1/2 md:w-1/6">
             <div class="flex justify-around w-10/12">
                 <img src="img/login_icon.png" alt="" class="h-8" />
                 <img src="img/facebook.jpeg" alt="" class="h-8" />
@@ -36,53 +32,48 @@
     </div>
 </div>
 <hr />
-<!-- <div
-    class="personal-banner w-9/12 mx-auto h-52 bg-banner rounded-md mt-8 p-2 text-5xl font-extrabold flex items-center text-center"
->
-    <span
-        class="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-violet-500"
-    >
-        Hello everyone! Welcome to my blog. Hope you guys can find some helpful
-        things here
-    </span>
-</div> -->
-
-<div
-    class="personal-banner w-9/12 mx-auto h-52 bg-banner rounded-xl mt-8 p-2 text-5xl font-extrabold flex items-center text-center"
->
-    <div
-        class="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-violet-500 w-full"
-    >
-        {#each words as word, index}
-            <span
-                class="word inline-block bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-violet-500"
-                style="animation-delay: {index * 0.2}s"
-            >
-                {word}
-            </span>
-            <span> </span>
-        {/each}
-    </div>
-</div>
 
 <div class="main">
     <slot></slot>
 </div>
 
+<!-- <div class="container">
+    <div class="d1 bg-blue-500">Div 1</div>
+    <div class="d2 bg-green-500">Div 2</div>
+    <div class="d3 bg-red-500">Div 3</div>
+</div>
+
 <style>
-    .word {
-        opacity: 0;
-        animation: fadeIn 0.5s ease forwards;
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px; /* Adds space between the divs */
     }
 
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-            transform: translateX(10px);
+    /* Default layout for large screens - all divs in one row */
+    .d1,
+    .d2,
+    .d3 {
+        flex: 1;
+    }
+
+    /* Layout for smaller screens */
+    @media (max-width: 768px) {
+        .container {
+            /* Change direction to create two rows */
+            justify-content: space-between;
         }
-        to {
-            opacity: 1;
-            transform: translateX(0);
+
+        .d1,
+        .d3 {
+            /* Make d1 and d3 take less width to fit on same row */
+            flex: 0 0 45%;
+        }
+
+        .d2 {
+            /* Make d2 take full width on second row */
+            flex: 0 0 100%;
+            order: 1; /* Push d2 below d1 and d3 */
         }
     }
-</style>
+</style> -->
