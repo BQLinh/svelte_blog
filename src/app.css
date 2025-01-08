@@ -3,8 +3,14 @@
 @tailwind utilities;
 
 .nav-items {
-    @apply flex mx-2 px-4 border-b-4 border-transparent hover:border-bluelight hover:cursor-pointer text-bluelight font-semibold font-serif;
+    @apply flex mx-2 border-b-4 border-transparent hover:border-bluelight hover:cursor-pointer text-bluelight font-semibold font-serif;
 }
+
+
+
+/* .search-bar {
+    @apply w-full pl-10 py-2 border border-blue-200 placeholder-blue-200 rounded-2xl focus: outline-none focus:ring-blue-500 focus:border-blue-500 focus:placeholder-blue-500 focus:border-2
+} */
 
 .text-shadow {
     text-shadow: -1px -5px -2px #faf7f6;

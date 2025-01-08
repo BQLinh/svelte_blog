@@ -1,5 +1,6 @@
-<script>
+<script lang="ts">
     import "../output.css";
+    let { data, children } = $props();
 </script>
 
 <div class="flex h-auto mx-auto w-full md:w-9/12 md:h-16">
@@ -12,21 +13,33 @@
             <ul
                 class="flex justify-center align-middle mx-auto my-4 text-lg md:w-8/12"
             >
-                <li class="nav-items">Home</li>
-                <li class="nav-items">Science</li>
-                <li class="nav-items">Math</li>
-                <li class="nav-items">Chess</li>
-                <li class="nav-items">Philosophy</li>
-                <li class="nav-items">Life</li>
-                <li class="nav-items">Tech</li>
+                <li class="nav-items">
+                    <a class="px-4" href="/">Home</a>
+                </li>
+                {#each data.categories as data}
+                    <li class="nav-items">
+                        <a class="px-4" href="/{data.category}"
+                            >{data.category}</a
+                        >
+                    </li>
+                {/each}
             </ul>
         </div>
 
         <div class="flex justify-end items-center w-1/2 md:w-1/6">
             <div class="flex justify-around w-10/12">
-                <img src="img/login_icon.png" alt="" class="h-8" />
-                <img src="img/facebook.jpeg" alt="" class="h-8" />
-                <img src="img/instagram1.png" alt="" class="h-8" />
+                <div class="relative">
+                    <span
+                        class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400"
+                    >
+                        🔍
+                    </span>
+                    <input
+                        type="text"
+                        class="search-bar w-full pl-10 py-2 border border-blue-200 placeholder-blue-200 rounded-2xl focus:outline-none focus:ring-blue-400 focus:border-blue-400 focus:placeholder-blue-400 focus:border-2"
+                        placeholder="Search"
+                    />
+                </div>
             </div>
         </div>
     </div>
@@ -34,46 +47,5 @@
 <hr />
 
 <div class="main">
-    <slot></slot>
+    {@render children()}
 </div>
-
-<!-- <div class="container">
-    <div class="d1 bg-blue-500">Div 1</div>
-    <div class="d2 bg-green-500">Div 2</div>
-    <div class="d3 bg-red-500">Div 3</div>
-</div>
-
-<style>
-    .container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px; /* Adds space between the divs */
-    }
-
-    /* Default layout for large screens - all divs in one row */
-    .d1,
-    .d2,
-    .d3 {
-        flex: 1;
-    }
-
-    /* Layout for smaller screens */
-    @media (max-width: 768px) {
-        .container {
-            /* Change direction to create two rows */
-            justify-content: space-between;
-        }
-
-        .d1,
-        .d3 {
-            /* Make d1 and d3 take less width to fit on same row */
-            flex: 0 0 45%;
-        }
-
-        .d2 {
-            /* Make d2 take full width on second row */
-            flex: 0 0 100%;
-            order: 1; /* Push d2 below d1 and d3 */
-        }
-    }
-</style> -->
