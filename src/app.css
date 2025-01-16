@@ -2,16 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+    @apply font-semibold font-serif;
+}
 .nav-items {
-    @apply flex mx-2 border-b-4 border-transparent hover:border-bluelight hover:cursor-pointer text-bluelight font-semibold font-serif;
+    @apply flex mx-2 border-b-4 border-transparent hover:border-_bluelight hover:cursor-pointer text-_bluelight font-semibold font-serif;
 }
 
+.topics {
+    @apply  rounded-lg py-2 mb-1 font-semibold border-b-2 shadow-md shadow-slate-300 border-r-4 border-r-sky-200 hover:bg-_greenlight hover:border-r-sky-600 hover:origin-top hover:cursor-pointer px-4;
+}
 
-
-/* .search-bar {
-    @apply w-full pl-10 py-2 border border-blue-200 placeholder-blue-200 rounded-2xl focus: outline-none focus:ring-blue-500 focus:border-blue-500 focus:placeholder-blue-500 focus:border-2
-} */
-
+.topic-trans {
+    @apply transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none;
+}
 .text-shadow {
     text-shadow: -1px -5px -2px #faf7f6;
+    background-color: rgb(105, 216, 151);
+}
+
+.card-intro {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }

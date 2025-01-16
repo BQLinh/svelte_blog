@@ -1,12 +1,11 @@
 import { error } from '@sveltejs/kit';
-import { categories, topics } from '$lib/data';
+import { top_10_category_posts, topics, posts } from '$lib/data';
 
 export function load({ params }) {
-    const category = categories.find((category) => category.category === params.slug)
-
-    if (!category) error(404);
-    const mytopics = topics.filter((topic) => topic.category === category.category)
+    const myposts = posts;
+    const related_posts = posts;
+    const mytopics = topics.filter((topic) => topic.category === params.slug);
     return {
-        category, mytopics
+        myposts, mytopics, related_posts
     }
 }
