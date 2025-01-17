@@ -1,14 +1,14 @@
 <script>
-  const link = "product";
+  export let id;
+  import img from "$lib/images/science.jpg";
 </script>
 
 <div
   class="rounded-2xl h-88 mx-6 mb-6 overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-103 hover:shadow-lg hover:shadow-slate-400"
 >
-  <a href="/{link}">
-    <img src="img/science.jpg" alt="123" class="h-48 w-full object-cover" />
-
-    <div class="px-3 py-1 justify h-28">
+  <a href="/posts/{id}">
+    <img src={img} alt="123" class="h-48 w-full object-cover" />
+    <div class="px-3 py-1 justify h-">
       <div class="text-xl text-center text-sky-500">This is first content</div>
       <div class="card-intro text-sky-500 font-medium text-justify">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, incidunt

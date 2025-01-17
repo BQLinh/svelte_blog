@@ -16,7 +16,8 @@
     </div>
   </a>
 </div>
-<hr class="mb-4" />
+
+<!-- <hr class="mb-4" /> -->
 
 <style>
 </style>

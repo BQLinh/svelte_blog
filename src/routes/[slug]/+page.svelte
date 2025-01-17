@@ -22,27 +22,26 @@
 
 <div class="flex w-full mx-auto mt-4">
   <div class="w-2/12 border-gray-200 min-h-full">
-    <!-- <SearchBar></SearchBar>
-    <hr class="my-4" /> -->
     <ul>
       {#each data.mytopics as topic, index}
-        <li class={`topics ${colors[index % colors.length]} topic-trans`}>
-          <a href="/{topic.category}/{topic.topic}">{topic.topic}</a>
-        </li>
+        <a href="/{topic.category}/{topic.topic}">
+          <li class={`topics ${colors[index % colors.length]} topic-trans`}>
+            {topic.topic}
+          </li>
+        </a>
       {/each}
     </ul>
   </div>
 
   <div class="flex w-10/12">
-    <div></div>
     <div class="w-4/5">
-      <div class="mx-6">
+      <div class="mx-16">
         <Label title="heheheheh"></Label>
       </div>
 
-      <div class="grid grid-cols-2 auto-rows-min">
+      <div class="grid grid-cols-2 auto-rows-min mx-10">
         {#each data.myposts as post}
-          <Cards></Cards>
+          <Cards id={post.id}></Cards>
         {/each}
       </div>
     </div>
