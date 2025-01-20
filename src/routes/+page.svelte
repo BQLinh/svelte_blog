@@ -4,7 +4,9 @@
     export let data;
 </script>
 
-<div>
+div
+
+<!-- <div>
     <img {src} alt="cat" />
 </div>
 <div>
@@ -14,7 +16,7 @@
     <h2>Table of Contents</h2>
 
     {@html data.toc}
-</div>
+</div> -->
 
 <style>
     .toc {

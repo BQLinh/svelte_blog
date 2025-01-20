@@ -9,7 +9,7 @@
   <a href="/posts/{id}">
     <img src={img} alt="123" class="h-48 w-full object-cover" />
     <div class="px-3 py-1 justify h-">
-      <div class="text-xl text-center text-sky-500">This is first content</div>
+      <div class="text-xl text-center text-sky-600">This is first content</div>
       <div class="card-intro text-sky-500 font-medium text-justify">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, incidunt
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum

@@ -47,9 +47,9 @@
     <div>
         <hr />
         <div
-            class="footer text-sky-500 flex h-auto mx-auto w-full lg:w-9/12 font-inter pt-4 mb-4 py-5"
+            class="footer text-sky-500 flex h-auto mx-auto w-full lg:w-10/12 font-inter pt-4 mb-4 py-5"
         >
-            <div class="w-3/12 rounded-md">
+            <div class="w-2/12 rounded-md">
                 <div
                     class="h-full text-center mb-2 px-1 py-3 rounded-md shadow-lg shadow-slate-400 border-t-2 border-sky-200 hover:border-r-sky-600"
                 >
@@ -60,9 +60,9 @@
                 </div>
             </div>
 
-            <div class=" w-6/12 rounded-md mx-4">
+            <div class=" w-8/12 rounded-md">
                 <div
-                    class="h-full text-center mb-2 px-1 py-3 rounded-md shadow-lg shadow-slate-400 border-t-2 border-sky-200 hover:border-r-sky-600"
+                    class="h-full text-center mb-2 py-3 rounded-md shadow-lg shadow-slate-400 border-t-2 border-sky-200 hover:border-r-sky-600 mx-16"
                 >
                     "Good people are good because they've come to wisdom through
                     failure." "Your word is a lamp for my feet, a light for my
@@ -72,7 +72,7 @@
                 </div>
             </div>
 
-            <div class=" w-3/12 rounded-md">
+            <div class=" w-2/12 rounded-md">
                 <div
                     class=" h-full text-center mb-2 px-1 py-3 rounded-md shadow-lg shadow-slate-400 border-t-2 border-sky-200 hover:border-r-sky-600"
                 >
